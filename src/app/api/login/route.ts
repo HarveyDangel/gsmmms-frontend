@@ -15,12 +15,12 @@ export async function POST(req: Request) {
     });
 
     const data = await laravelRes.json();
-
     return NextResponse.json(data, { status: laravelRes.status });
+
   } catch (error: any) {
     return NextResponse.json(
-      { message: "Proxy Error", error: error.message },
-      { status: 500 }
+      {message: "Proxy Error", error: error.message},
+      {status: 500}
     );
   }
 }

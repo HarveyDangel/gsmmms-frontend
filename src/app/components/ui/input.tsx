@@ -23,7 +23,7 @@ export default function Input({
 			placeholder={placeholder}
 			name={name}
 			id={id}
-			className={`border border-gray-400 rounded-md p-2 focus:ring-2 focus:outline-none focus:ring-green-500 ${className}`}
+			className={`border border-gray-400 rounded-md p-1 focus:ring-2 focus:outline-none focus:ring-green-500 ${className}`}
 			value={value}
 			onChange={onChange}
 		/>

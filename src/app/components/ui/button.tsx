@@ -1,3 +1,4 @@
+'use client';
 // import { Children } from "react";
 
 import { ReactNode } from "react";
@@ -26,7 +27,7 @@ export default function Button({
 				onClick={onClick}
 				disabled={disabled}
 				id={id}
-				className={`bg-green-600 text-white px-3 py-2 rounded-md shadow-md ${className}`}
+				className={`bg-green-600 text-white px-3 py-2 rounded-md shadow-md hover:shadow-green-400/50 hover:scale-110 ${className}`}
 			>
 				{children}
 			</button>

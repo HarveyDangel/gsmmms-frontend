@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode } from 'react';
 
 interface CardProps {
@@ -7,7 +9,7 @@ interface CardProps {
 
 export default function Card({ children, className = '' }: CardProps) {
   return (
-    <div className={`bg-white rounded-lg ${className}`}>
+    <div className={`bg-[#fdfdfd] rounded-lg ${className}`}>
       {children}
     </div>
   );

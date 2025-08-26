@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-	--background: #ffffff;
+	--background: #efefef;
 	--foreground: #171717;
 }
 
@@ -45,11 +45,16 @@ h5 {
 	font-size: 20px;
 }
 
-a, button{
-  font-size: 18px;
-}
-
-p {
+a, button {
   font-size: 16px;
 }
 
+p, label {
+  font-size: 14px;
+}
+
+.info {
+  font-size: 12px;
+  font-weight: 200;
+  color:#2b2b2b
+}

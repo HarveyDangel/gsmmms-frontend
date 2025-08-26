@@ -27,7 +27,7 @@ export default function Home() {
           <a href="">About</a>
           <a href="">Services</a>
           <a href="">Contact</a>
-          <Button><a href={`/auth/sign-up`}>Sign Up</a></Button>
+          <Button><a href={`/auth/register`}>Sign Up</a></Button>
         </Navigation>
 				<Hero />
         
