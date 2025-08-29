@@ -27,7 +27,7 @@ export default function Button({
 				onClick={onClick}
 				disabled={disabled}
 				id={id}
-				className={`bg-green-600 text-white px-3 py-2 rounded-md shadow-md hover:shadow-green-400/50 hover:scale-110 ${className}`}
+				className={`bg-green-600 text-white px-3 py-2 rounded-md shadow-md hover:shadow-green-400/50 hover:scale-105 focus:ring-green-300 ${className}`}
 			>
 				{children}
 			</button>

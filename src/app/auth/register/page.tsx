@@ -11,6 +11,7 @@ export default function Register() {
 		name: "",
 		email: "",
 		password: "",
+		password2: "",
 	});
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -38,32 +39,57 @@ export default function Register() {
 					<p className="info">Please fill in the form to create an account.</p>
 					<br />
 					<form onSubmit={handleSubmit} className="flex flex-col gap-5">
-						<div className="flex flex-col gap-1">
-							<label htmlFor="name">Name</label>
-							<Input type="text" id="name" name="name" placeholder="Name" onChange={handleChange} />
-						</div>
-						<div className="flex flex-col gap-1">
-							<label htmlFor="email">Email</label>
-							<Input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="example@email.com"
-                        onChange={handleChange}
+
+						<Input
+							label="name"
+							placeholder="Juan Dela Cruz"
+							className="placeholder:text-[14px]"
+							type="text"
+							id="name"
+							name="name"
+							onChange={handleChange}
+							autoComplete="name"
+							required
 							/>
-						</div>
-						<div className="flex flex-col gap-1">
-							<label htmlFor="passsword">Password</label>
-							<Input
-								type="password"
-								id="password"
-								name="password"
-								placeholder="********"
-                        onChange={handleChange}
+
+						<Input
+							label="email"
+							placeholder="example@email.com"
+							className="placeholder:text-[14px]"
+							type="email"
+							id="email"
+							name="email"
+							onChange={handleChange}
+							autoComplete="email"
+							required
 							/>
-						</div>
+
+						<Input
+							label="password"
+							placeholder="••••••••"
+							className="placeholder:text-gray-400 placeholder:tracking-widest"
+							type="password"
+							id="password"
+							name="password"
+							onChange={handleChange}
+							autoComplete="current-password"
+							required/>
+
+						<Input
+							label="confirm password"
+							placeholder="••••••••"
+							className="placeholder:text-gray-400 placeholder:tracking-widest"
+							type="password"
+							id="confirm password"
+							name="confirm password"
+							onChange={handleChange}
+							autoComplete="current-password"
+							required/>
+
 						<Button type="submit">Sign Up</Button>
 					</form>
+
+					<p className="mt-3 info">{`Already have an account?`} <a href="/auth/login" className="hover:underline text-green-500 info">Login Here</a></p>
 				</Card>
 			</div>
 		</>

@@ -34,28 +34,32 @@ export default function Login() {
 					<p className="info">Please enter your credentials to log in.</p>
 					<br />
 					<form onSubmit={handleSubmit} className="flex flex-col gap-5">
-						<div className="flex flex-col gap-1">
-							<label htmlFor="email">Email</label>
-							<Input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="example@email.com"
-                        onChange={handleChange}
-							/>
-						</div>
-						<div className="flex flex-col gap-1">
-							<label htmlFor="password">Password</label>
-							<Input
-								type="password"
-								id="password"
-								name="password"
-								placeholder="**********"
-                        onChange={handleChange}
-							/>
-						</div>
+						
+						<Input
+							label="email"
+							placeholder="example@email.com"
+							className="placeholder:text-[14px]"
+							type="email"
+							id="email"
+							name="email"
+							onChange={handleChange}
+							autoComplete="email"
+							required/>
+
+						<Input
+							label="password"
+							placeholder="••••••••"
+							className="placeholder:text-gray-400 placeholder:tracking-widest"
+							type="password"
+							id="password"
+							name="password"
+							onChange={handleChange}
+							autoComplete="current-password"
+							required/>
+					
 						<Button type="submit">Login</Button>
 					</form>
+					<p className="mt-3 info">{`Don't have an account yet?`} <a href="/auth/register" className="hover:underline text-green-500 info">Register Here</a></p>
 				</Card>
 			</div>
 		</>
