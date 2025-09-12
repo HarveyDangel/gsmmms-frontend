@@ -14,12 +14,28 @@ export default function Register() {
 		password2: "",
 	});
 
+	const [error, setError] = useState("");
+
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
+
+		if (e.target.name === "password2") {
+			if (e.target.value !== formData.password) {
+				setError("Passwords do not match");
+			} else {
+				setError("");
+			}
+		}
 	};
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+
+		// if (formData.password !== formData.password2) {
+		// 	setError("Passwords do not match");
+		// 	return;
+		// }
+
 		const response = await fetch("/api/register", {
 			method: "POST",
 			headers: {
@@ -39,7 +55,6 @@ export default function Register() {
 					<p className="info">Please fill in the form to create an account.</p>
 					<br />
 					<form onSubmit={handleSubmit} className="flex flex-col gap-5">
-
 						<Input
 							label="name"
 							placeholder="Juan Dela Cruz"
@@ -50,7 +65,7 @@ export default function Register() {
 							onChange={handleChange}
 							autoComplete="name"
 							required
-							/>
+						/>
 
 						<Input
 							label="email"
@@ -62,7 +77,7 @@ export default function Register() {
 							onChange={handleChange}
 							autoComplete="email"
 							required
-							/>
+						/>
 
 						<Input
 							label="password"
@@ -73,23 +88,33 @@ export default function Register() {
 							name="password"
 							onChange={handleChange}
 							autoComplete="current-password"
-							required/>
+							required
+						/>
 
 						<Input
 							label="confirm password"
 							placeholder="••••••••"
 							className="placeholder:text-gray-400 placeholder:tracking-widest"
 							type="password"
-							id="confirm password"
-							name="confirm password"
+							id="password2"
+							name="password2"
 							onChange={handleChange}
 							autoComplete="current-password"
-							required/>
-
+							required
+						/>
+						{error && <p className="text-red-500 text-sm -mt-4">{error}</p>}
 						<Button type="submit">Sign Up</Button>
 					</form>
 
-					<p className="mt-3 info">{`Already have an account?`} <a href="/auth/login" className="hover:underline text-green-500 info">Login Here</a></p>
+					<p className="mt-3 info">
+						{`Already have an account?`}{" "}
+						<a
+							href="/auth/login"
+							className="hover:underline text-green-500 info"
+						>
+							Login Here
+						</a>
+					</p>
 				</Card>
 			</div>
 		</>

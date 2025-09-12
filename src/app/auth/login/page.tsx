@@ -56,6 +56,8 @@ export default function Login() {
 							onChange={handleChange}
 							autoComplete="current-password"
 							required/>
+
+						<a href="/auth/forget-password" className="hover:underline text-green-500 info flex justify-end -mt-3">Forget password</a>
 					
 						<Button type="submit">Login</Button>
 					</form>
