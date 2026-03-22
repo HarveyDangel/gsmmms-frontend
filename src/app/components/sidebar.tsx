@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, Home, Map, FileText, Settings } from "lucide-react";
+import { Menu, X, Home, User2Icon, Map, FileText, Settings, UserIcon } from "lucide-react";
 
 export default function Sidebar({ active, setActive }: { active: string; setActive: (val: string) => void }) {
   const [open, setOpen] = useState(true);
 
   const menuItems = [
     { name: "Dashboard", icon: <Home size={20} /> },
+    { name: "Children", icon: <User2Icon size={20}/>},
     { name: "Map", icon: <Map size={20} /> },
     { name: "Reports", icon: <FileText size={20} /> },
     { name: "Settings", icon: <Settings size={20} /> },
@@ -14,7 +15,7 @@ export default function Sidebar({ active, setActive }: { active: string; setActi
 
   return (
     <div
-      className={`bg-gray-100 border-r h-screen p-4 transition-all duration-300
+      className={`bg-gray-100 border-r h-screen p-4 transition-all duration-300 
       ${open ? "w-64" : "w-16"} flex flex-col`}
     >
       {/* Toggle Button */}

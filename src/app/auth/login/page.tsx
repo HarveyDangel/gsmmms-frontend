@@ -29,11 +29,11 @@ export default function Login() {
 	return (
 		<>
 			<div className="flex flex-col items-center justify-center min-h-screen">
-				<Card className="shadow-2xl shadow-green-400/50 p-10 min-w-sm">
+				<Card className="p-10 min-w-sm">
 					<h1>Login</h1>
 					<p className="info">Please enter your credentials to log in.</p>
 					<br />
-					<form onSubmit={handleSubmit} className="flex flex-col gap-5">
+					<form onSubmit={handleSubmit} className="flex flex-col gap-5 [&_input]:bg-gray-100">
 						
 						<Input
 							label="email"
@@ -49,7 +49,7 @@ export default function Login() {
 						<Input
 							label="password"
 							placeholder="••••••••"
-							className="placeholder:text-gray-400 placeholder:tracking-widest"
+							className="placeholder:text-gray-400 placeholder:tracking-wides"
 							type="password"
 							id="password"
 							name="password"
