@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X, Home, User2Icon, Map, FileText, Settings, UserIcon } from "lucide-react";
+// import { SidebarItems } from "@/app/data/sidebarItems"; // Adjust path based on your setup
 
 export default function Sidebar({ active, setActive }: { active: string; setActive: (val: string) => void }) {
   const [open, setOpen] = useState(true);
@@ -10,6 +11,7 @@ export default function Sidebar({ active, setActive }: { active: string; setActi
     { name: "Children", icon: <User2Icon size={20}/>},
     { name: "Map", icon: <Map size={20} /> },
     { name: "Reports", icon: <FileText size={20} /> },
+    { name: "Users", icon: <UserIcon size={20} /> },
     { name: "Settings", icon: <Settings size={20} /> },
   ];
 

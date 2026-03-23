@@ -5,6 +5,7 @@ import Sidebar from "@/app/components/sidebar";
 import Dashboard from "@/app/components/dashboard";
 import MapPage from "@/app/components/mapPage";
 import Reports from "@/app/components/report";
+import UserPage from "@/app/components/userPage";
 import Settings from "@/app/components/settings";
 import Children from "@/app/components/children";
 
@@ -21,6 +22,7 @@ export default function Page() {
         {active === "Children" && <Children/>}
         {active === "Map" && <MapPage />}
         {active === "Reports" && <Reports />}
+        {active === "Users" && <UserPage />}
         {active === "Settings" && <Settings />}
       </main>
     </div>

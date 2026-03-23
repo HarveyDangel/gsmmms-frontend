@@ -9,7 +9,7 @@ import {
 	createColumnHelper,
 } from "@tanstack/react-table";
 
-// 1. Define your Data Type
+
 type User = {
 	id: number;
 	name: string;
@@ -26,7 +26,6 @@ const defaultData: User[] = [
 	{ id: 6, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
 	{ id: 7, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
 	{ id: 8, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-	// ... add more mock data to test pagination
 ];
 
 const columnHelper = createColumnHelper<User>();
