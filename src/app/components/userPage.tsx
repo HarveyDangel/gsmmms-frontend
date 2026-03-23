@@ -12,28 +12,6 @@ import {
 import Card from "./ui/card";
 import { User, userData } from "@/app/data/users";
 
-
-// type User = {
-// 	id: number;
-// 	name: string;
-// 	email: string;
-// 	role: string;
-// };
-
-// const defaultData: User[] = [
-// 	{ id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
-// 	{ id: 2, name: "Jane Smith", email: "jane@example.com", role: "User" },
-// 	{ id: 3, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-// 	{ id: 4, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-// 	{ id: 5, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-// 	{ id: 6, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-// 	{ id: 7, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-// 	{ id: 8, name: "Alice Johnson", email: "alice@example.com", role: "Editor" },
-
-// ];
-
-
-
 const columnHelper = createColumnHelper<User>();
 
 export default function DataTable() {
