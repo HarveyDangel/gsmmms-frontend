@@ -1,4 +1,4 @@
-export function isPasswordStrong( password: string ) {
+export function isPasswordMinimun( password: string ) {
 	let pass = password;
 
 	if (pass.length < 8) {
@@ -16,3 +16,14 @@ export function isPasswordMatched( password: string, password2: string) {
    }
    return ('');
 }
+
+export function isPasswordClean( password: string) {
+   let pass = password;
+
+   if (pass) {
+      return ('Password must not contain these <>/* symbols');
+   }
+   return ('');
+}
+
+

@@ -15,7 +15,7 @@ const [showAdd, setShowAdd] = useState(false);
 	return (
 		<>
 			<div>	
-				<h1 className="text-2xl font-bold mb-4">Children</h1>
+				<h1 className="font-bold mb-4">Children</h1>
 				{!showAdd ? ( 
 					<>
 					<Button className={`mb-4`} onClick={() => setShowAdd(true)}>Add Child</Button>
