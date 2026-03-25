@@ -1,7 +1,7 @@
 "use client";
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+// import L from 'leaflet';
 
 // Fix for default marker icons in Next.js
 // const icon = L.icon({ iconUrl: "/marker-icon.png" }); 
